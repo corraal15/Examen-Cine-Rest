@@ -25,12 +25,12 @@ public class Reparto {
     private double salario;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_pelicula")
+    @JoinColumn(name = "pelicula_id")
     private Pelicula pelicula;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_actor")
-    private Actor Actor;
+    @JoinColumn(name = "actor_id")
+    private Actor actor;
    
 
 }

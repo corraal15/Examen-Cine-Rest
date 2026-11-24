@@ -34,6 +34,76 @@ public class Pelicula {
     private int duracion;
 
     @Column
-    @OneToMany(mappedBy = "reparto")
-    List<Reparto> repartos=new ArrayList<>();    
+    @OneToMany(mappedBy = "id", orphanRemoval = true)
+    List<Reparto> repartos=new ArrayList<>();   
+    
+    public static void addReparto(Reparto reparto){
+        
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public void setDirector(String director) {
+        this.director = director;
+    }
+
+    public int getAnio() {
+        return anio;
+    }
+
+    public void setAnio(int anio) {
+        this.anio = anio;
+    }
+
+    public int getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(int duracion) {
+        this.duracion = duracion;
+    }
+
+    public List<Reparto> getRepartos() {
+        return repartos;
+    }
+
+    public void setRepartos(List<Reparto> repartos) {
+        this.repartos = repartos;
+    }
+
+    @Override
+    public String toString() {
+        return "Pelicula [id=" + id + ", titulo=" + titulo + ", director=" + director + ", anio=" + anio + ", duracion="
+                + duracion + ", repartos=" + repartos + "]";
+    }
+
+    public Pelicula() {
+    }
+
+    public Pelicula(Long id, String titulo, String director, int anio, int duracion, List<Reparto> repartos) {
+        this.id = id;
+        this.titulo = titulo;
+        this.director = director;
+        this.anio = anio;
+        this.duracion = duracion;
+        this.repartos = repartos;
+    }
 }

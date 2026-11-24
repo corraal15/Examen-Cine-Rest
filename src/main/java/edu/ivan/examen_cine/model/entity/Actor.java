@@ -25,6 +25,6 @@ public class Actor {
     private String nacionalidad;
 
     @Column
-    @OneToMany(mappedBy = "reparto")
+    @OneToMany(mappedBy = "id")
     List<Reparto> repartos=new ArrayList<>(); 
 }
