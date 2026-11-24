@@ -99,7 +99,7 @@ public class Pelicula {
     }
 
     public Pelicula(Long id, String titulo, String director, int anio, int duracion, List<Reparto> repartos) {
-        this.id = id;
+        this.id=id;
         this.titulo = titulo;
         this.director = director;
         this.anio = anio;

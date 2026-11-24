@@ -31,6 +31,63 @@ public class Reparto {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "actor_id")
     private Actor actor;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getPersonaje() {
+        return personaje;
+    }
+
+    public void setPersonaje(String personaje) {
+        this.personaje = personaje;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public Pelicula getPelicula() {
+        return pelicula;
+    }
+
+    public void setPelicula(Pelicula pelicula) {
+        this.pelicula = pelicula;
+    }
+
+    public Actor getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor actor) {
+        this.actor = actor;
+    }
+
+    @Override
+    public String toString() {
+        return "Reparto [id=" + id + ", personaje=" + personaje + ", salario=" + salario + ", pelicula=" + pelicula
+                + ", actor=" + actor + "]";
+    }
+
+    public Reparto() {
+    }
+
+    public Reparto(Long id, String personaje, double salario, Pelicula pelicula, Actor actor) {
+        this.id = id;
+        this.personaje = personaje;
+        this.salario = salario;
+        this.pelicula = pelicula;
+        this.actor = actor;
+    }
    
 
 }

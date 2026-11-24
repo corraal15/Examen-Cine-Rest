@@ -1,6 +1,9 @@
-package edu.ivan.examen_cine.service.controller;
+package edu.ivan.examen_cine.controller;
 
 import org.springframework.web.bind.annotation.RestController;
+
+import edu.ivan.examen_cine.model.dto.PeliculaRequestDTO;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,10 +17,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RestController
 public class PeliculaController {
     @PostMapping("/api/peliculas")
-    public String crearPelicula(@RequestBody String entity) {
-        //TODO: process POST request
+    public String crearPelicula(PeliculaRequestDTO dto) {
         
-        return entity;
+        
+        return null;
     }
 
     @GetMapping("/api/peliculas")

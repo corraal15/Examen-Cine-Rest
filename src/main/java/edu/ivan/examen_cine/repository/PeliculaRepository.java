@@ -1,4 +1,4 @@
-package edu.ivan.examen_cine.model.repository;
+package edu.ivan.examen_cine.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

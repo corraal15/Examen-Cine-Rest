@@ -26,5 +26,53 @@ public class Actor {
 
     @Column
     @OneToMany(mappedBy = "id")
-    List<Reparto> repartos=new ArrayList<>(); 
+    List<Reparto> repartos=new ArrayList<>();
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNacionalidad() {
+        return nacionalidad;
+    }
+
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
+    }
+
+    public List<Reparto> getRepartos() {
+        return repartos;
+    }
+
+    public void setRepartos(List<Reparto> repartos) {
+        this.repartos = repartos;
+    }
+
+    @Override
+    public String toString() {
+        return "Actor [id=" + id + ", nombre=" + nombre + ", nacionalidad=" + nacionalidad + ", repartos=" + repartos
+                + "]";
+    }
+
+    public Actor() {
+    }
+
+    public Actor(Long id, String nombre, String nacionalidad, List<Reparto> repartos) {
+        this.id = id;
+        this.nombre = nombre;
+        this.nacionalidad = nacionalidad;
+        this.repartos = repartos;
+    } 
 }
